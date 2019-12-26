@@ -1,7 +1,4 @@
 <script>
-  // TODO:
-  // Workaround for bug when importing svelte components from linked packages
-  // https://github.com/sveltejs/svelte/issues/3165
   import { Form, Field, ErrorMessage } from "svelte-forms-lib";
   import Code from "../components/Code.svelte";
   import { source, highlight } from "../components/Helpers";
