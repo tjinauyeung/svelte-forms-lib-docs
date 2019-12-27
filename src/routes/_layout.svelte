@@ -95,6 +95,7 @@
     margin-right: 20px;
     font-size: 14px;
     opacity: 0.8;
+    line-height: 1.5;
   }
 
   .avatar {
