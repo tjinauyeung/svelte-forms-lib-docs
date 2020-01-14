@@ -79,7 +79,7 @@
 </style>
 
 <div class="wrapper">
-  <h1 class="heading">code</h1>
+  <h2 class="heading">code</h2>
   <pre bind:this={pre} on:click={copy} />
   <div class="copy">{copyText}</div>
 </div>

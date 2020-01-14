@@ -51,13 +51,16 @@
   }
 
   .link {
-    display: inline-block;
-    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 12px 20px;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
     font-weight: 400;
     border-radius: 4px;
+    line-height: 1.8;
   }
 
   .link.active {
@@ -104,7 +107,7 @@
   }
 
   .badge {
-    padding: 6px 10px;
+    padding: 3px 10px;
     text-transform: uppercase;
     color: var(--secondary);
     font-weight: bold;
@@ -142,7 +145,13 @@
       <a class="link" class:active={segment === "yup"} href="/yup">Yup validation</a>
       <a class="link" class:active={segment === "array"} href="/array">Forms array</a>
       <a class="link" class:active={segment === "helpers"} href="/helpers">
-        Helper components
+        <span>Helper components</span>
+        <span class="badge">new</span>
+      </a>
+      <a class="link" class:active={segment === "helpers-override-css"} href="/helpers-override-css">
+        <span>Helper components
+        <br/> (override CSS)
+        </span>
         <span class="badge">new</span>
       </a>
     </nav>

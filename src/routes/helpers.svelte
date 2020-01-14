@@ -1,8 +1,10 @@
 <script>
   import { Form, Field, ErrorMessage } from "svelte-forms-lib";
   import Code from "../components/Code.svelte";
+  import NoteCSS from "../components/NoteCSS.svelte";
   import { source, highlight } from "../components/Helpers";
   import yup from "yup";
+  import { fmtHTML } from "../util";
 
   const formProps = {
     initialValues: { name: "", email: "" },
@@ -17,14 +19,9 @@
       alert(JSON.stringify(values, null, 2));
     }
   };
-
-  function fmtHTML(string) {
-    return `<${string}/>`;
-  }
 </script>
 
 <h1>Using helper components</h1>
-<hr />
 <p>
   Here's an example using the helper components i.e.
   <code>{fmtHTML('Form')}</code>
@@ -38,14 +35,16 @@
   concise.
 </p>
 
+<NoteCSS />
+
 <Form {...formProps}>
   <label>name</label>
-  <Field name="name" />
-  <ErrorMessage name="name" />
+  <Field class="form-input" name="name" />
+  <ErrorMessage class="form-error" name="name" />
 
   <label>email</label>
-  <Field name="email" />
-  <ErrorMessage name="email" />
+  <Field class="form-input" name="email" type="password" />
+  <ErrorMessage class="form-error" name="email" />
 
   <button type="submit">submit</button>
 </Form>

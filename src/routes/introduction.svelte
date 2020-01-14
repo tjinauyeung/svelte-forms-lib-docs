@@ -2,21 +2,7 @@
   import Code from "../components/Code.svelte";
 </script>
 
-<style>
-  pre {
-    background: var(--secondary);
-    padding: 20px;
-    border-radius: 8px;
-    line-height: 1.8;
-    overflow: scroll;
-    font-size: 14px;
-    color: #fff;
-    font-family: Roboto Mono, monospace;
-  }
-</style>
-
 <h1>Introduction</h1>
-<hr />
 <p>
   Svelte forms lib is a
   <a href="https://jaredpalmer.com/formik/" target="_blank">Formik</a>

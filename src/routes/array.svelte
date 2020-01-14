@@ -58,7 +58,6 @@
 </style>
 
 <h1>Form array</h1>
-<hr/>
 <p>
   Example using dynamic form with adding and removing of new fields or objects. Validation and
   values are persisted. Support for nested field targeting i.e.

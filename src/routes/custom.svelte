@@ -1,16 +1,21 @@
 <script>
   import { createForm } from "svelte-forms-lib";
   import Code from "../components/Code.svelte";
+  import NoteCSS from '../components/NoteCSS.svelte';
   import { source, highlight } from "../components/Custom";
   import yup from "yup";
 
   const { form, errors, state, handleChange, handleSubmit } = createForm({
     initialValues: {
+      title: "",
       name: "",
       email: ""
     },
     validate: values => {
       let errs = {};
+      if (values.title !== "Mr." && values.title !== "Mrs." && values.title !== "Mx.") {
+        errs["title"] = "custom validation: title must be either Mr, Mrs or Mx.";
+      }
       if (values.name === "") {
         errs["name"] = "custom validation: name is required";
       }
@@ -26,7 +31,6 @@
 </script>
 
 <h1>Custom validation</h1>
-<hr />
 <p>
   This example shows how you can use your own validation functions. Validation
   is only fired upon submission. When submitting the
@@ -39,7 +43,24 @@
   an empty object is returned the form will be valid and submit.
 </p>
 
+<NoteCSS />
+
 <form on:submit={handleSubmit}>
+  <label for="title">title</label>
+  <select
+    id="title"
+    name="title"
+    on:change={handleChange}
+    bind:value={$form.title}>
+    <option></option>
+    <option>Mr.</option>
+    <option>Mrs.</option>
+    <option>Mx.</option>
+  </select>
+  {#if $errors.title}
+    <small>{$errors.title}</small>
+  {/if}
+
   <label for="name">name</label>
   <input
     id="name"

@@ -12,6 +12,10 @@ export const source = `
         email: ""
       },
       validationSchema: yup.object().shape({
+        title: yup
+          .string()
+          .oneOf(["Mr.", "Mrs.", "Mx."])
+          .required(),
         name: yup.string().required(),
         email: yup
           .string()
@@ -25,6 +29,21 @@ export const source = `
   </script>
 
   <form on:submit={handleSubmit}>
+    <label for="title">title</label>
+    <select
+      id="title"
+      name="title"
+      on:change={handleChange}
+      bind:value={$form.title}>
+      <option />
+      <option>Mr.</option>
+      <option>Mrs.</option>
+      <option>Mx.</option>
+    </select>
+    {#if $errors.title}
+      <small>{$errors.title}</small>
+    {/if}
+
     <label for="name">name</label>
     <input
       id="name"
