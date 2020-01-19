@@ -21,12 +21,14 @@
   };
 </script>
 
-<h1>Using helper components</h1>
+<h1>Helper components</h1>
 <p>
-  Here's an example using the helper components i.e.
+  Here is an example using the helper components i.e.
   <code>{fmtHTML('Form')}</code>
   ,
   <code>{fmtHTML('Field')}</code>
+  ,
+  <code>{fmtHTML('Select')}</code>
   and
   <code>{fmtHTML('ErrorMessage')}</code>
   .
@@ -43,7 +45,7 @@
   <ErrorMessage class="form-error" name="name" />
 
   <label>email</label>
-  <Field class="form-input" name="email" type="password" />
+  <Field class="form-input" name="email" type="email" />
   <ErrorMessage class="form-error" name="email" />
 
   <button type="submit">submit</button>

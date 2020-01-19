@@ -1,5 +1,6 @@
 <script>
   export let segment;
+  import { fmtHTML } from "../util";
 </script>
 
 <style>
@@ -106,18 +107,6 @@
     height: 32px;
   }
 
-  .badge {
-    padding: 3px 10px;
-    text-transform: uppercase;
-    color: var(--secondary);
-    font-weight: bold;
-    margin-left: 8px;
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    border-radius: 50px;
-    background: var(--primary-dark);
-  }
-
   .github {
     position: fixed;
     top: 0;
@@ -135,24 +124,40 @@
 <div class="layout">
   <aside class="aside">
     <img alt="logo of svelte forms lib" class="logo" src="./logo.png" />
-    <p class="version">V1.0.0</p>
+    <p class="version">V1.0.2</p>
     <nav>
       <h4 class="nav-heading">Getting started</h4>
-      <a class="link" class:active={segment === "introduction"} href="/introduction">Introduction</a>
-      <h4 class="nav-heading">Examples</h4>
-      <a class="link" class:active={segment === "basic"} href="/basic">Basic</a>
-      <a class="link" class:active={segment === "custom"} href="/custom">Custom validation</a>
-      <a class="link" class:active={segment === "yup"} href="/yup">Yup validation</a>
-      <a class="link" class:active={segment === "array"} href="/array">Forms array</a>
-      <a class="link" class:active={segment === "helpers"} href="/helpers">
-        <span>Helper components</span>
-        <span class="badge">new</span>
+      <a
+        class="link"
+        class:active={segment === 'introduction'}
+        href="/introduction">
+        Introduction
       </a>
-      <a class="link" class:active={segment === "helpers-override-css"} href="/helpers-override-css">
-        <span>Helper components
-        <br/> (override CSS)
-        </span>
-        <span class="badge">new</span>
+      <a
+        class="link"
+        class:active={segment === 'observables'}
+        href="/observables">
+        Observables
+      </a>
+      <h4 class="nav-heading">Examples</h4>
+      <a class="link" class:active={segment === 'basic'} href="/basic">Basic</a>
+      <a class="link" class:active={segment === 'custom'} href="/custom">
+        Custom validation
+      </a>
+      <a class="link" class:active={segment === 'yup'} href="/yup">
+        Yup validation
+      </a>
+      <a class="link" class:active={segment === 'array'} href="/array">
+        Forms array
+      </a>
+      <a class="link" class:active={segment === 'helpers'} href="/helpers">
+        Helper components
+      </a>
+      <a class="link" class:active={segment === 'styling'} href="/styling">
+        Styling
+      </a>
+      <a class="link" class:active={segment === 'field'} href="/field">
+        {fmtHTML('Field')}
       </a>
     </nav>
   </aside>

@@ -1,7 +1,7 @@
 <script>
   import { Form, Field, ErrorMessage } from "svelte-forms-lib";
   import Code from "../components/Code.svelte";
-  import { source, highlight } from "../components/HelpersOverrideCSS";
+  import { source, highlight } from "../components/Styling";
   import yup from "yup";
   import { fmtHTML } from "../util";
 
@@ -45,9 +45,9 @@
   }
 </style>
 
-<h1>Override CSS of helper components</h1>
+<h1>Styling</h1>
 <p>
-  To override the CSS of the helpers components you can pass a class as a prop
+  Styling the helper components can be done by passing a class as prop
   e.g.
   <code>{fmtHTML('Field class="css-class-name')}</code>
   and define it in the
