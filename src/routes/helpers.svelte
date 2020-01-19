@@ -1,5 +1,5 @@
 <script>
-  import { Form, Field, ErrorMessage } from "svelte-forms-lib";
+  import { Form, Field, Select, ErrorMessage } from "svelte-forms-lib";
   import Code from "../components/Code.svelte";
   import NoteCSS from "../components/NoteCSS.svelte";
   import { source, highlight } from "../components/Helpers";
@@ -7,8 +7,16 @@
   import { fmtHTML } from "../util";
 
   const formProps = {
-    initialValues: { name: "", email: "" },
+    initialValues: {
+      title: "",
+      name: "",
+      email: ""
+    },
     validationSchema: yup.object().shape({
+      title: yup
+        .string()
+        .oneOf(["Mr.", "Mrs.", "Mx."])
+        .required(),
       name: yup.string().required(),
       email: yup
         .string()
@@ -40,13 +48,22 @@
 <NoteCSS />
 
 <Form {...formProps}>
+  <label>title</label>
+  <Select name="title">
+    <option />
+    <option>Mr.</option>
+    <option>Mrs.</option>
+    <option>Mx.</option>
+  </Select>
+  <ErrorMessage name="title" />
+
   <label>name</label>
-  <Field class="form-input" name="name" />
-  <ErrorMessage class="form-error" name="name" />
+  <Field name="name" />
+  <ErrorMessage name="name" />
 
   <label>email</label>
-  <Field class="form-input" name="email" type="email" />
-  <ErrorMessage class="form-error" name="email" />
+  <Field name="email" type="email" />
+  <ErrorMessage name="email" />
 
   <button type="submit">submit</button>
 </Form>

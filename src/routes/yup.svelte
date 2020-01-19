@@ -7,6 +7,7 @@
 
   const { form, errors, state, handleChange, handleSubmit } = createForm({
     initialValues: {
+      title: "",
       name: "",
       email: ""
     },
