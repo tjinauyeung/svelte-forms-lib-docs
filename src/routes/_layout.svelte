@@ -124,7 +124,7 @@
 <div class="layout">
   <aside class="aside">
     <img alt="logo of svelte forms lib" class="logo" src="./logo.png" />
-    <p class="version">V1.0.2</p>
+    <p class="version">V1.0.4</p>
     <nav>
       <h4 class="nav-heading">Getting started</h4>
       <a

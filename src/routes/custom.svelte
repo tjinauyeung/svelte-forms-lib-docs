@@ -33,9 +33,8 @@
 <h1>Custom validation</h1>
 <p>
   This example shows how you can use your own validation functions. Validation
-  is only fired upon submission. When submitting the
-  <code>validate</code>
-  callback is called and given the form values at submission time.
+  is fired when field changes and upon submission. The <code>validate</code>
+  callback is called and given the latest form values as argument.
 </p>
 <p>
   In the callback you can construct and return an error object. If the errors
