@@ -1,6 +1,7 @@
 <script>
   export let segment;
   import { fmtHTML } from "../util";
+  import Star from "../components/Star.svelte";
 </script>
 
 <style>
@@ -124,7 +125,10 @@
 <div class="layout">
   <aside class="aside">
     <img alt="logo of svelte forms lib" class="logo" src="./logo.png" />
-    <p class="version">V1.0.4</p>
+    <section class="version">
+      <p>V1.0.4</p>
+      <Star />
+    </section>
     <nav>
       <h4 class="nav-heading">Getting started</h4>
       <a
