@@ -20,6 +20,7 @@
     padding: 30px 30px 50px;
     flex: 0 0 320px;
     color: #fff;
+    overflow-x: scroll;
   }
 
   .version {
