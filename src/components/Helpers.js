@@ -3,7 +3,7 @@ import "prism-svelte";
 
 export const source = `
   <script>
-    import { Form, Field, ErrorMessage } from "svelte-forms-lib";
+    import { Form, Field, Select, ErrorMessage } from "svelte-forms-lib";
     import yup from "yup";
 
     const formProps = {
