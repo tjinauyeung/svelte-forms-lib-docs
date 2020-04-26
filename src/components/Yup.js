@@ -4,7 +4,7 @@ import "prism-svelte";
 export const source = `
   <script>
     import { createForm } from "svelte-forms-lib";
-    import yup from "yup";
+    import * as yup from "yup";
 
     const { form, errors, state, handleChange, handleSubmit } = createForm({
       initialValues: {

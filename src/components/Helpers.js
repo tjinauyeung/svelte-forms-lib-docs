@@ -4,11 +4,12 @@ import "prism-svelte";
 export const source = `
   <script>
     import { Form, Field, Select, ErrorMessage } from "svelte-forms-lib";
-    import yup from "yup";
+    import * as yup from "yup";
 
     const formProps = {
       initialValues: { name: "", email: "" },
       validationSchema: yup.object().shape({
+        title: yup.string().oneOf(["Mr.", "Mrs.", "Mx."]),
         name: yup.string().required(),
         email: yup
           .string()
@@ -19,9 +20,9 @@ export const source = `
         alert(JSON.stringify(values));
       }
     };
-  </script>
+    </script>
 
-  <Form {...formProps}>
+    <Form {...formProps}>
     <label>title</label>
     <Select name="title">
       <option />
