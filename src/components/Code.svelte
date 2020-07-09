@@ -71,7 +71,7 @@
     padding: 50px 20px 40px;
     border-radius: 12px;
     line-height: 1.8;
-    overflow: scroll;
+    overflow: hidden;
     font-size: 14px;
     color: #fff;
     font-family: var(--font-mono);
