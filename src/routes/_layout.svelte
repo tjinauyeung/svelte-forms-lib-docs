@@ -9,7 +9,7 @@
     display: flex;
     position: relative;
     height: 100vh;
-    overflow: scroll;
+    overflow-x: hidden;
   }
 
   .aside {

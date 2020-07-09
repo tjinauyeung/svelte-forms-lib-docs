@@ -1,6 +1,6 @@
 {
   "name": "svelte-forms-lib-docs",
-  "description": "Documentation website for Svelte Forms Lib ",
+  "description": "Documentation website for Svelte Forms Lib",
   "version": "1.0.4",
   "scripts": {
     "dev": "sapper dev",

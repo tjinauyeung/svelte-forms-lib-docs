@@ -111,7 +111,7 @@ pre {
   padding: 20px;
   border-radius: 8px;
   line-height: 1.8;
-  overflow: scroll;
+  overflow: hidden;
   font-size: 14px;
   color: #fff;
   font-family: Roboto Mono, monospace;
