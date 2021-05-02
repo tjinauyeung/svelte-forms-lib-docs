@@ -35,7 +35,6 @@
 <style>
   .wrapper {
     position: relative;
-    cursor: pointer;
   }
 
   .wrapper:hover .copy {
@@ -43,6 +42,7 @@
   }
 
   .copy {
+    z-index: 10;
     opacity: 0;
     background: #fff;
     color: #000;
@@ -52,7 +52,6 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    pointer-events: none;
   }
 
   .heading {
@@ -80,6 +79,6 @@
 
 <div class="wrapper">
   <h2 class="heading">code</h2>
-  <pre bind:this={pre} on:click={copy} />
-  <div class="copy">{copyText}</div>
+  <pre bind:this={pre} />
+  <button class="copy" on:click={copy}>{copyText}</button>
 </div>
