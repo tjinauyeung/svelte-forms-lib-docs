@@ -15,7 +15,7 @@
     "compression": "^1.7.1",
     "polka": "next",
     "prism-svelte": "0.4.6",
-    "prismjs": "1.17.1",
+    "prismjs": "1.24.0",
     "sirv": "^0.4.0",
     "svelte-forms-lib": "1.0.4",
     "yup": "0.28.0"
