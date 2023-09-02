@@ -2,6 +2,7 @@
   export let segment;
   import { fmtHTML } from "../util";
   import Star from "../components/Star.svelte";
+  const currentYear = new Date().getFullYear()
 </script>
 
 <style>
@@ -21,6 +22,7 @@
     padding: 30px 30px 50px;
     flex: 0 0 320px;
     color: #fff;
+    overflow-x:auto;
   }
 
   .version {
@@ -177,7 +179,7 @@
     </div>
     <footer class="footer">
       <span class="footer-text">
-        Copyright ©2019. Code licensed under an MIT-style License
+        Copyright ©{currentYear}. Code licensed under an MIT-style License
       </span>
       <a href="https://www.tjinauyeung.com" target="_blank">
         <img
